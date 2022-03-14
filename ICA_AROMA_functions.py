@@ -153,8 +153,9 @@ def register2MNI(fslDir, inFile, outFile, affmat, warp):
 
     # Define the MNI152 T1 2mm template
     fslnobin = fslDir.rsplit('/', 2)[0]
-    ref = os.path.join(fslnobin, 'data', 'standard', 'MNI152_T1_2mm_brain.nii.gz')
-
+    #ref = os.path.join(fslnobin, 'data', 'standard', 'MNI152_T1_2mm_brain.nii.gz')
+    ref = '/home/fs0/dlh429/scratch/atlas/cornell/canine_population_template.nii.gz'
+    
     # If the no affmat- or warp-file has been specified, assume that the data is already in MNI152 space. In that case only check if resampling to 2mm is needed
     if (len(affmat) == 0) and (len(warp) == 0):
         # Get 3D voxel size

@@ -204,9 +204,9 @@ print('Step 1) MELODIC')
 aromafunc.runICA(fslDir, inFile, outDir, melDir, mask, dim, TR)
 
 print('Step 2) Automatic classification of the components')
-print('  - registering the spatial maps to MNI')
+print('  - registering the spatial maps to cornell')
 melIC = os.path.join(outDir, 'melodic_IC_thr.nii.gz')
-melIC_MNI = os.path.join(outDir, 'melodic_IC_thr_MNI2mm.nii.gz')
+melIC_MNI = os.path.join(outDir, 'melodic_IC_thr_cornell.nii.gz')
 aromafunc.register2MNI(fslDir, melIC, melIC_MNI, affmat, warp)
 
 print('  - extracting the CSF & Edge fraction features')
